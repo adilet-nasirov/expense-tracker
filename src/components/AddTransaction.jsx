@@ -5,6 +5,7 @@ const AddTransaction = () => {
   const [description, setDescription]= useState('');
   const [amount, setAmount] = useState(0);
   const addTransaction=()=>{
+    if(!amount || !description) return;
     let arr = transactions ? [...transactions] : [];
     arr.push({amount:amount, description: description})
     setTransactions(arr);
