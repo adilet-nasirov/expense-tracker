@@ -19,6 +19,7 @@ const AddTransaction = () => {
         <label for='text'>Text</label>
         <input id="text" type="text" placeholder="Enter text..."  value={description} onChange={(e)=>setDescription(e.target.value)}/>
         <label for='amount'>Amount</label>
+        <p>(negative: expense, positive: income)</p>
         <input type="number" id="amount" placeholder="Enter amount..." value={amount ? amount : ''} onChange={(e)=>setAmount(e.target.value)}/>
       </div>
       <div>
