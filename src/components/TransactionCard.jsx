@@ -1,8 +1,9 @@
 import React from "react";
 
 const TransactionCard = ({amount, description}) => {
+  let colorOfBorder = Number(amount)>0 ? 'green' : 'red'
   return (
-    <div className="card">
+    <div className={`card ${colorOfBorder}`}>
       <p>{description}</p>
       <p>{amount}$</p>
       <button className="delete-btn">X</button>

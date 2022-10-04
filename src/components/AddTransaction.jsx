@@ -8,6 +8,8 @@ const AddTransaction = () => {
     let arr = transactions ? [...transactions] : [];
     arr.push({amount:amount, description: description})
     setTransactions(arr);
+    setDescription('');
+    setAmount(0)
   }
   return (
     <div className="add-transaction-container">

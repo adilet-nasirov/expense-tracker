@@ -78,7 +78,12 @@ h3 {
   margin: 7px 0;
   position: relative;
 }
-
+.green{
+  border-right: 8px solid green;
+}
+.red{
+  border-right: red 8px solid;
+}
 .delete-btn {
   background-color: #c0382b;
   color: white;

@@ -31,7 +31,7 @@ function count(arr,type){
             let num = Number(el.amount);
             if(num<0) sum+=num;
         }
-        return sum;
+        return Math.abs(sum);
     }
 }
 
