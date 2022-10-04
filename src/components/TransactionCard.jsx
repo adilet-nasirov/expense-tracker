@@ -1,10 +1,10 @@
 import React from "react";
 
-const TransactionCard = () => {
+const TransactionCard = ({amount, description}) => {
   return (
     <div className="card">
-      <p>Icecream</p>
-      <p>-$ 50.00</p>
+      <p>{description}</p>
+      <p>{amount}$</p>
       <button className="delete-btn">X</button>
     </div>
   );

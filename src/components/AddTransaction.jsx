@@ -1,8 +1,14 @@
-import React, { useState } from "react";
-
+import React, { useContext, useState } from "react";
+import { TransactionsContext } from "../Helper/Context";
 const AddTransaction = () => {
+  const {transactions, setTransactions} = useContext(TransactionsContext);
   const [description, setDescription]= useState('');
   const [amount, setAmount] = useState(0);
+  const addTransaction=()=>{
+    let arr = transactions ? [...transactions] : [];
+    arr.push({amount:amount, description: description})
+    setTransactions(arr);
+  }
   return (
     <div className="add-transaction-container">
       <h3>Add new transaction</h3>
@@ -13,7 +19,7 @@ const AddTransaction = () => {
         <input type="number" id="amount" placeholder="Enter amount..." value={amount ? amount : ''} onChange={(e)=>setAmount(e.target.value)}/>
       </div>
       <div>
-        <button className="btn">Add transaction</button>
+        <button onClick={addTransaction} className="btn">Add transaction</button>
       </div>
     </div>
   );

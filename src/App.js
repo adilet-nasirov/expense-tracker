@@ -10,7 +10,7 @@ function App() {
   const [transactions, setTransactions] = useState([]);
   return (
     <div className="container">
-      <TransactionsContext.Provider>
+      <TransactionsContext.Provider value={{transactions,setTransactions}}>
         <Header />
         <main>
           {/* Balance */}
